@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 객체생성해주는 bean을 생성해준다 -->
+	<bean id = "samsung" class="step1.SamsungTV" scope="prototype"/>
+	<bean id = "lg" class="step1.LgTV" scope="singleton"/>
+	
+	
+	<!-- 생성자 함수를 통하지 않고 factory-method 기술하여 getInstace 하여 객체를 생성하겠다고 정의 -->
+	<bean id="calendar" class="java.util.Calendar" factory-method="getInstance" />
+
+
+</beans>
